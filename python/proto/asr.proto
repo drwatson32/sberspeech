@@ -21,13 +21,15 @@ message RecognitionResponse {
 
 message Hints {
   repeated string words = 1;
-  bool enable_letters = 2; google.protobuf.Duration eou = 3;
+  bool enable_letters = 2;
+  google.protobuf.Duration eou = 3;
 }
 
 message RecognitionOptions {
   enum AudioEncoding {
     RESERVED = 0;
-    PCM_S16LE = 1; // 16-bit signed little-endian (Linear PCM) OPUS = 2; // mime audio/ogg; codecs=opus
+    PCM_S16LE = 1; // 16-bit signed little-endian (Linear PCM) 
+    OPUS = 2; // mime audio/ogg; codecs=opus
   }
   AudioEncoding audio_encoding = 1;
   int32 sample_rate = 2; // Only for PCM_16LE audio encoding
@@ -36,7 +38,9 @@ message RecognitionOptions {
   Hints hints = 6;
   bool enable_profanity_filter = 7;
   bool enable_multi_utterance = 8;
-  bool enable_partial_results = 9; google.protobuf.Duration no_speech_timeout = 10; google.protobuf.Duration max_speech_timeout = 11;
+  bool enable_partial_results = 9; 
+  google.protobuf.Duration no_speech_timeout = 10; 
+  google.protobuf.Duration max_speech_timeout = 11;
 }
 
 message Hypothesis {

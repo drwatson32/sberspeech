@@ -9,12 +9,10 @@ import asr_pb2_grpc as asr_pb2_grpc
 
 CHUNK_SIZE = 4000
 
-def dump(obj):
-  for attr in dir(obj):
-    print("obj.%s = %r" % (attr, getattr(obj, attr)))
-
 def gen(model, hypotheses, sample_rate, path):
     audio_encoding = asr_pb2.RecognitionOptions.PCM_S16LE 
+
+    print("step 1")
     options = asr_pb2.RecognitionOptions(
         audio_encoding=audio_encoding, 
         model=model,
@@ -23,10 +21,13 @@ def gen(model, hypotheses, sample_rate, path):
         enable_partial_results=True,
         sample_rate=sample_rate)
 
+    print("step 2")
     yield asr_pb2.RecognitionRequest(options=options)
 
+    print ("step 3")
     with open(path, 'rb') as f:
         data = f.read(CHUNK_SIZE)
+        print(data)
         while data != b'':
             yield asr_pb2.RecognitionRequest(audio_chunk=data)
             data = f.read(CHUNK_SIZE)

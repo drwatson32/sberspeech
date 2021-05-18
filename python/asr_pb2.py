@@ -20,7 +20,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=b'\n\004TODOZ\013./;protocol',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\tasr.proto\x12\x1asmartspeech.recognition.v1\x1a\x1egoogle/protobuf/duration.proto\"y\n\x12RecognitionRequest\x12\x41\n\x07options\x18\x01 \x01(\x0b\x32..smartspeech.recognition.v1.RecognitionOptionsH\x00\x12\x15\n\x0b\x61udio_chunk\x18\x02 \x01(\x0cH\x00\x42\t\n\x07request\"Z\n\x13RecognitionResponse\x12\x36\n\x06result\x18\x01 \x03(\x0b\x32&.smartspeech.recognition.v1.Hypothesis\x12\x0b\n\x03\x65ou\x18\x02 \x01(\x08\"V\n\x05Hints\x12\r\n\x05words\x18\x01 \x03(\t\x12\x16\n\x0e\x65nable_letters\x18\x02 \x01(\x08\x12&\n\x03\x65ou\x18\x03 \x01(\x0b\x32\x19.google.protobuf.Duration\"\xd9\x03\n\x12RecognitionOptions\x12T\n\x0e\x61udio_encoding\x18\x01 \x01(\x0e\x32<.smartspeech.recognition.v1.RecognitionOptions.AudioEncoding\x12\x13\n\x0bsample_rate\x18\x02 \x01(\x05\x12\x10\n\x08language\x18\x03 \x01(\t\x12\x18\n\x10hypotheses_count\x18\x05 \x01(\x05\x12\x30\n\x05hints\x18\x06 \x01(\x0b\x32!.smartspeech.recognition.v1.Hints\x12\x1f\n\x17\x65nable_profanity_filter\x18\x07 \x01(\x08\x12\x1e\n\x16\x65nable_multi_utterance\x18\x08 \x01(\x08\x12\x1e\n\x16\x65nable_partial_results\x18\t \x01(\x08\x12\x34\n\x11no_speech_timeout\x18\n \x01(\x0b\x32\x19.google.protobuf.Duration\x12\x35\n\x12max_speech_timeout\x18\x0b \x01(\x0b\x32\x19.google.protobuf.Duration\",\n\rAudioEncoding\x12\x0c\n\x08RESERVED\x10\x00\x12\r\n\tPCM_S16LE\x10\x01\"\x85\x01\n\nHypothesis\x12\x0c\n\x04text\x18\x01 \x01(\t\x12\x17\n\x0fnormalized_text\x18\x02 \x01(\t\x12(\n\x05start\x18\x03 \x01(\x0b\x32\x19.google.protobuf.Duration\x12&\n\x03\x65nd\x18\x04 \x01(\x0b\x32\x19.google.protobuf.Duration2\x81\x01\n\x0bSmartSpeech\x12r\n\tRecognize\x12..smartspeech.recognition.v1.RecognitionRequest\x1a/.smartspeech.recognition.v1.RecognitionResponse\"\x00(\x01\x30\x01\x42\x13\n\x04TODOZ\x0b./;protocolb\x06proto3'
+  serialized_pb=b'\n\tasr.proto\x12\x1asmartspeech.recognition.v1\x1a\x1egoogle/protobuf/duration.proto\"y\n\x12RecognitionRequest\x12\x41\n\x07options\x18\x01 \x01(\x0b\x32..smartspeech.recognition.v1.RecognitionOptionsH\x00\x12\x15\n\x0b\x61udio_chunk\x18\x02 \x01(\x0cH\x00\x42\t\n\x07request\"Z\n\x13RecognitionResponse\x12\x36\n\x06result\x18\x01 \x03(\x0b\x32&.smartspeech.recognition.v1.Hypothesis\x12\x0b\n\x03\x65ou\x18\x02 \x01(\x08\"V\n\x05Hints\x12\r\n\x05words\x18\x01 \x03(\t\x12\x16\n\x0e\x65nable_letters\x18\x02 \x01(\x08\x12&\n\x03\x65ou\x18\x03 \x01(\x0b\x32\x19.google.protobuf.Duration\"\xe3\x03\n\x12RecognitionOptions\x12T\n\x0e\x61udio_encoding\x18\x01 \x01(\x0e\x32<.smartspeech.recognition.v1.RecognitionOptions.AudioEncoding\x12\x13\n\x0bsample_rate\x18\x02 \x01(\x05\x12\x10\n\x08language\x18\x03 \x01(\t\x12\x18\n\x10hypotheses_count\x18\x05 \x01(\x05\x12\x30\n\x05hints\x18\x06 \x01(\x0b\x32!.smartspeech.recognition.v1.Hints\x12\x1f\n\x17\x65nable_profanity_filter\x18\x07 \x01(\x08\x12\x1e\n\x16\x65nable_multi_utterance\x18\x08 \x01(\x08\x12\x1e\n\x16\x65nable_partial_results\x18\t \x01(\x08\x12\x34\n\x11no_speech_timeout\x18\n \x01(\x0b\x32\x19.google.protobuf.Duration\x12\x35\n\x12max_speech_timeout\x18\x0b \x01(\x0b\x32\x19.google.protobuf.Duration\"6\n\rAudioEncoding\x12\x0c\n\x08RESERVED\x10\x00\x12\r\n\tPCM_S16LE\x10\x01\x12\x08\n\x04OPUS\x10\x02\"\x85\x01\n\nHypothesis\x12\x0c\n\x04text\x18\x01 \x01(\t\x12\x17\n\x0fnormalized_text\x18\x02 \x01(\t\x12(\n\x05start\x18\x03 \x01(\x0b\x32\x19.google.protobuf.Duration\x12&\n\x03\x65nd\x18\x04 \x01(\x0b\x32\x19.google.protobuf.Duration2\x81\x01\n\x0bSmartSpeech\x12r\n\tRecognize\x12..smartspeech.recognition.v1.RecognitionRequest\x1a/.smartspeech.recognition.v1.RecognitionResponse\"\x00(\x01\x30\x01\x42\x13\n\x04TODOZ\x0b./;protocolb\x06proto3'
   ,
   dependencies=[google_dot_protobuf_dot_duration__pb2.DESCRIPTOR,])
 
@@ -43,11 +43,16 @@ _RECOGNITIONOPTIONS_AUDIOENCODING = _descriptor.EnumDescriptor(
       serialized_options=None,
       type=None,
       create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='OPUS', index=2, number=2,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
   ],
   containing_type=None,
   serialized_options=None,
   serialized_start=806,
-  serialized_end=850,
+  serialized_end=860,
 )
 _sym_db.RegisterEnumDescriptor(_RECOGNITIONOPTIONS_AUDIOENCODING)
 
@@ -273,7 +278,7 @@ _RECOGNITIONOPTIONS = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=377,
-  serialized_end=850,
+  serialized_end=860,
 )
 
 
@@ -325,8 +330,8 @@ _HYPOTHESIS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=853,
-  serialized_end=986,
+  serialized_start=863,
+  serialized_end=996,
 )
 
 _RECOGNITIONREQUEST.fields_by_name['options'].message_type = _RECOGNITIONOPTIONS
@@ -397,8 +402,8 @@ _SMARTSPEECH = _descriptor.ServiceDescriptor(
   index=0,
   serialized_options=None,
   create_key=_descriptor._internal_create_key,
-  serialized_start=989,
-  serialized_end=1118,
+  serialized_start=999,
+  serialized_end=1128,
   methods=[
   _descriptor.MethodDescriptor(
     name='Recognize',
