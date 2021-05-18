@@ -25,7 +25,7 @@ def gen(model, hypotheses, sample_rate, path):
 
     yield asr_pb2.RecognitionRequest(options=options)
 
-    with open(audio_file_name, 'rb') as f:
+    with open(path, 'rb') as f:
         data = f.read(CHUNK_SIZE)
         while data != b'':
             yield asr_pb2.RecognitionRequest(audio_chunk=data)
@@ -63,4 +63,4 @@ if __name__ == '__main__':
     jwtrsp = requests.post('https://smartspeech.sber.ru/v1/token', data={}, auth=(args.username, args.password))
     jwt = jwtrsp.json()['tok']
 
-    run('https://smartspeech.sber.ru', jwt, args.model, args.hypotheses, args.sample_rate, args.file)
+    run('smartspeech.sber.ru', jwt, args.model, args.hypotheses, args.sample_rate, args.file)
