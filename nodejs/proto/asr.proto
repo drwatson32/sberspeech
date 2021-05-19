@@ -33,7 +33,8 @@ message RecognitionOptions {
   }
   AudioEncoding audio_encoding = 1;
   int32 sample_rate = 2; // Only for PCM_16LE audio encoding
-  string language = 3; // Language code in RFC-xxxx format, i.e.: ru-RU string model = 4;
+  string language = 3; // Language code in RFC-xxxx format, i.e.: ru-RU 
+  string model = 4;
   int32 hypotheses_count = 5;
   Hints hints = 6;
   bool enable_profanity_filter = 7;
