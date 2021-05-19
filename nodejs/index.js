@@ -25,7 +25,6 @@ const recognitionOptions = {
   language: 'ru-RU',
   hypotheses_count: 1,
   enable_profanity_filter: true,
-  enable_multi_utterance: false,
   enable_partial_results: true,
   model: 'general'
 };
