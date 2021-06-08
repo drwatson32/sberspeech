@@ -7,7 +7,7 @@ import json
 import asr_pb2 as asr_pb2
 import asr_pb2_grpc as asr_pb2_grpc
 
-CHUNK_SIZE = 4000
+CHUNK_SIZE = 2000
 
 def gen(model, hypotheses, sample_rate, path):
     audio_encoding = asr_pb2.RecognitionOptions.PCM_S16LE 
@@ -52,8 +52,8 @@ if __name__ == '__main__':
     parser.add_argument('--username', required=True, help='SberSpeech username')
     parser.add_argument('--password', required=True, help='SberSpeech password')
     parser.add_argument('--file', required=True, help='Path to pcm16 or opus audio file for recognition')
-    parser.add_argument('--sample-rate', required=False, default=16000, type=int, help='Audio file sample_rate (pcm only)')
-    parser.add_argument('--model', required=False, default='general', help='Recognition model name')
+    parser.add_argument('--sample-rate', required=False, default=8000, type=int, help='Audio file sample_rate (pcm only)')
+    parser.add_argument('--model', required=False, default='ivr', help='Recognition model name')
     parser.add_argument('--hypotheses', required=False, default=1, type=int, help='Recognition hypotheses count')
     args = parser.parse_args()
     

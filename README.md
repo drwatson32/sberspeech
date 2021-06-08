@@ -1,12 +1,16 @@
-NodeJS (not working now):
-cd nodejs
+# Samples for SberSpeech ASR&TTS
+## ASR
+In asr directory
+
+**NodeJS** (not working now):
+cd asr/nodejs
 npm install
 export SBERSPEECH_USERNAME=<username>
 export SBERSPEECH_PASSWORD=<password>
 node index.js ../sounds/pepsi16kHz.wav
 
-Python Example (working now):
-cd python
+**Python** (working now):
+cd asr/python
 python3 main.py --username <username> --password <password> --file ../sounds/pepsi16kHz.wav
 
 Expected result:
@@ -30,4 +34,12 @@ Got end-of-utterance result:
  Hyp #1: Я бы хотел большую пепси и 1 пиццу с грибами
 Recognition has finished
 
+## TTS
+In tts directory
 
+**Python**
+cd tts/python
+python3 main.py --username <username> --password <password> --voice Bys --text 'Примерный текст для озвучки'
+
+Expected result:
+saved to ca76fbbc-4bb2-48d0-8b48-8fede444879d.wav

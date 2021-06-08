@@ -1,3 +1,4 @@
-nodejs/node_modules/**
-nodejs/package-lock.json
-python/__pycache__/**
+asr/nodejs/node_modules/**
+asr/nodejs/package-lock.json
+asr/python/__pycache__/**
+tts/python/__pycache__/**
