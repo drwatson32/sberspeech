@@ -6,7 +6,7 @@ import requests
 import json
 import shutil
 
-def run(host, jwt, text, voice):
+def run(host, jwt, voice, text):
     local_filename = f'{uuid.uuid4()}.wav'
      
     with requests.post('https://smartspeech.sber.ru/rest/v1/text:synthesize', 
@@ -33,4 +33,4 @@ if __name__ == '__main__':
     jwtrsp = requests.post('https://smartspeech.sber.ru/v1/token', data={}, auth=(args.username, args.password))
     jwt = jwtrsp.json()['tok']
 
-    run('smartspeech.sber.ru', jwt, args.text, args.voice)
+    run('smartspeech.sber.ru', jwt, args.voice, args.text)

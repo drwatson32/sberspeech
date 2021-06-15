@@ -37,9 +37,17 @@ Recognition has finished
 ## TTS
 In tts directory
 
-**Python**
-cd tts/python
+**Python** (working)
+**Text sample**
+cd tts/text/python
 python3 main.py --username <username> --password <password> --voice Bys --text 'Примерный текст для озвучки'
+
+Expected result:
+saved to ca76fbbc-4bb2-48d0-8b48-8fede444879d.wav
+
+**SSML sample**
+cd tts/ssml/python
+python3 main.py --username <username> --password <password> --voice Bys --ssml example.ssml
 
 Expected result:
 saved to ca76fbbc-4bb2-48d0-8b48-8fede444879d.wav
