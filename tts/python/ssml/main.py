@@ -28,7 +28,7 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('--username', required=True, help='SberSpeech username')
     parser.add_argument('--password', required=True, help='SberSpeech password')
-    parser.add_argument('--voice', required=True, help='Voice for TTS (May, Tor or Bys)')
+    parser.add_argument('--voice', required=True, help='Voice for TTS (May, Tur or Bys)')
     parser.add_argument('--ssml', required=True, help='SSML file for TTS')
     args = parser.parse_args()
     
